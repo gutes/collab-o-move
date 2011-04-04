@@ -13,8 +13,13 @@
 		<span id="arAlphaLabel"></span><br/> 										
 		<span id="arBetaLabel"></span><br/> 										
 		<span id="arGammaLabel"></span><br/>
-	</div>	
+	</div>		
 	<script>
+		  var ws_channel = new WebSocket("ws://{{ websocket_server_host }}:{{ websocket_server_port }}/websocket");
+		
+	      ws_channel.onopen = function() {
+	         ws_channel.send("start!");
+	      };
 
 		// Acceleration
 		var ax = 0;
@@ -47,11 +52,14 @@
 		document.getElementById("ilabel").innerHTML = "I: " + ai;										
 		document.getElementById("arAlphaLabel").innerHTML = "arA: " + arAlpha;															
 		document.getElementById("arBetaLabel").innerHTML = "arB: " + arBeta;
-		document.getElementById("arGammaLabel").innerHTML = "arG: " + arGamma;																									
+		document.getElementById("arGammaLabel").innerHTML = "arG: " + arGamma;
+		
+		accData = "x:"+ax+" y:"+ay+" z:"+az+" i:"+ai+" rA:"+arAlpha+" rB:"+arBeta+" rG:"+arGamma
+		ws_channel.send(accData);																									
 																								
 			}, delay);
 			
 	</script>
-	
+
 </body>
 </html>
