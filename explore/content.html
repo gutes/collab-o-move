@@ -18,7 +18,6 @@
 		  var ws_channel = new WebSocket("ws://{{ websocket_server_host }}:{{ websocket_server_port }}/websocket");
 		
 	      ws_channel.onopen = function() {
-	         ws_channel.send("start!");
 	      };
 
 		// Acceleration
@@ -33,9 +32,10 @@
 		var delay = 100;
 			
 		window.ondevicemotion = function(event) {
-			ax = Math.round(Math.abs(event.accelerationIncludingGravity.x * 1));
-			ay = Math.round(Math.abs(event.accelerationIncludingGravity.y * 1));
-			az = Math.round(Math.abs(event.accelerationIncludingGravity.z * 1));		
+			ax = event.accelerationIncludingGravity.x
+			ay = event.accelerationIncludingGravity.y
+			az = event.accelerationIncludingGravity.z			
+			
 			ai = Math.round(event.interval * 100) / 100;
 			rR = event.rotationRate;
 			if (rR != null) {
@@ -54,7 +54,7 @@
 		document.getElementById("arBetaLabel").innerHTML = "arB: " + arBeta;
 		document.getElementById("arGammaLabel").innerHTML = "arG: " + arGamma;
 		
-		accData = "x:"+ax+" y:"+ay+" z:"+az+" i:"+ai+" rA:"+arAlpha+" rB:"+arBeta+" rG:"+arGamma
+		accData = ax+":"+ay+":"+az+":"+ai+":"+arAlpha+":"+arBeta+":"+arGamma
 		ws_channel.send(accData);																									
 																								
 			}, delay);
