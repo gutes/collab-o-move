@@ -1,0 +1,23 @@
+<html lang="en" refresh=1>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>TEST! - CLIENTS</title>
+	<meta name="author" content="gutes">
+	<meta http-equiv="refresh" content="0.5">
+</head>
+<body>
+	<div>
+		<ul>
+       {% for id, item in clients.iteritems() %}
+         <li>{{ escape(id) }} 
+		 	<ul>
+		 		<li>Ax: {{ escape(item.ax) }}</li>
+				<li>Ay: {{ escape(item.ay) }}</li>
+				<li>Az: {{ escape(item.az) }}</li>
+		 	</ul>
+		 </li>
+       {% end %}
+	   </ul>
+	</div>		
+</body>
+</html>
