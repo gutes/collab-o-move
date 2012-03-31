@@ -1,0 +1,23 @@
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\bin\x86\Debug\pocorn.exe
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\bin\x86\Debug\pocorn.pdb
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\obj\x86\Debug\pocorn.exe
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocorn\obj\x86\Debug\pocorn.pdb
+C:\Users\Ezequiel Gutesman\Documents\Visual Studio 2010\Projects\pocorn\pocorn\pocorn\bin\x86\Debug\Content\google-pacman-logo-sprites.xnb
+C:\Users\Ezequiel Gutesman\Documents\Visual Studio 2010\Projects\pocorn\pocorn\pocorn\bin\x86\Debug\Content\pacman-sprites.xnb
+C:\Users\Ezequiel Gutesman\Documents\Visual Studio 2010\Projects\pocorn\pocorn\pocorn\bin\x86\Debug\Content\pacman1.xnb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Content\google-pacman-logo-sprites.xnb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Content\pacman-sprites.xnb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Content\pacman1.xnb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\pocorn.exe
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\pocorn.pdb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\clrzmq.dll
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\clrzmq.pdb
+Z:\collab-o-move\pocorn\pocorn\pocorn\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\collab-o-move\pocorn\pocorn\pocorn\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+Z:\collab-o-move\pocorn\pocorn\pocorn\obj\x86\Debug\pocorn.exe
+Z:\collab-o-move\pocorn\pocorn\pocorn\obj\x86\Debug\pocorn.pdb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Newtonsoft.Json.dll
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Newtonsoft.Json.pdb
+Z:\collab-o-move\pocorn\pocorn\pocorn\bin\x86\Debug\Newtonsoft.Json.xml

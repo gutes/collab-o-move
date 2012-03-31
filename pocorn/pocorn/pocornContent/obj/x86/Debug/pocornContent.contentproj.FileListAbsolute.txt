@@ -1,0 +1,2 @@
+c:\users\ezequiel gutesman\documents\visual studio 2010\Projects\pocorn\pocorn\pocornContent\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\collab-o-move\pocorn\pocorn\pocornContent\obj\x86\Debug\ResolveAssemblyReference.cache

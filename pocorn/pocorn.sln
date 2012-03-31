@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pocorn", "pocorn\pocorn\pocorn.csproj", "{05F3916C-FFA7-4C27-B3E8-3C242418024E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pocornContent", "pocorn\pocornContent\pocornContent.contentproj", "{1D20DA55-C7B2-4DD5-BDC1-5CE835E1DE0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05F3916C-FFA7-4C27-B3E8-3C242418024E}.Debug|x86.ActiveCfg = Debug|x86
+		{05F3916C-FFA7-4C27-B3E8-3C242418024E}.Debug|x86.Build.0 = Debug|x86
+		{05F3916C-FFA7-4C27-B3E8-3C242418024E}.Release|x86.ActiveCfg = Release|x86
+		{05F3916C-FFA7-4C27-B3E8-3C242418024E}.Release|x86.Build.0 = Release|x86
+		{1D20DA55-C7B2-4DD5-BDC1-5CE835E1DE0C}.Debug|x86.ActiveCfg = Debug|x86
+		{1D20DA55-C7B2-4DD5-BDC1-5CE835E1DE0C}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
