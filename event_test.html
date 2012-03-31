@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io.connect('http://10.0.0.22:8080');
+
+	  var filter_factor = 0.9;
+	  var last_ax = 0;
+	  var last_ay = 0;
+	  var last_az = 0;
+	  
+	  var dir_front = 0;
+	  var dir_back = 0;
+	  var dir_left = 0;
+	  var dir_right = 0;
+	  var movements = [];
+		
+		window.addEventListener("devicemotion", function(e){				
+			var ax = e.accelerationIncludingGravity.x;
+			var ay = e.accelerationIncludingGravity.y;			
+			var az = e.accelerationIncludingGravity.z;			
+			
+			last_ax = ax * filter_factor + (last_ax * (1.0 - filter_factor));
+			last_ay = ay * filter_factor + (last_ay * (1.0 - filter_factor));
+			last_az = az * filter_factor + (last_az * (1.0 - filter_factor));
+			
+			var up_down = parseInt(last_ax);
+			var left_right = parseInt(last_ay), 
+
+			dir_front = (up_down < 0 ? Math.abs(up_down):0);
+			dir_back = (up_down > 0 ? Math.abs(up_down):0);			
+			dir_left = (left_right < 0 ? Math.abs(left_right):0);
+			dir_right = (left_right > 0 ? Math.abs(left_right):0);
+
+			dir_center = dir_front == 0 && dir_back == 0 && dir_left == 0 && dir_right == 0; 
+			
+			document.getElementById("ui_front").style.backgroundColor = (dir_front > 0 ? "red":"white")
+			document.getElementById("ui_back").style.backgroundColor = (dir_back > 0 ? "red":"white")
+			document.getElementById("ui_left").style.backgroundColor = (dir_left > 0 ? "red":"white")
+			document.getElementById("ui_right").style.backgroundColor = (dir_right > 0 ? "red":"white")			
+			
+			document.getElementById("ui_center").style.backgroundColor = (dir_center == true ? "red":"white")			
+			
+			if( movements.length == 3 )
+			{
+				var _f = 0;
+				var _d = 0;
+				var _l = 0;
+				var _r = 0;			
+				for(k in movements) {
+					_f += movements[k].front ;
+					_d += movements[k].down ;
+					_l += movements[k].left;
+					_r += movements[k].right; 					 
+				}				
+				movements = [];
+				socket.emit("devicemotion", { front: _f, 
+											  down: _d, 
+											  left: _l, 
+											  right: _r});
+								
+			} else {
+				
+				movements.push( {front: dir_front, 
+								 down: dir_back, 
+								 left: dir_left, 
+								 right: dir_right} )
+			}
+			
+										
+			
+		});		
+
+	</script>
+</head>
+
+<body>
+	<h1>TEST</h1>
+	<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="background-color:white; width:200px" id="ui_front">front	</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="background-color:white; width:200px" id="ui_left">left</td>
+			<td style="background-color:white; width:200px" id="ui_center">center</td>
+			<td style="background-color:white; width:200px" id="ui_right">right</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="background-color:white; width:200px" id="ui_back">back</td>
+			<td>&nbsp;</td>
+		</tr>				
+	</table>
+</body>
+
+<html>
